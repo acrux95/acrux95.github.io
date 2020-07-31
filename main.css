@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+:root {
+    --wine-color: rgb(54, 16, 16);
+    --orange-color: bisque;
+    --ligth-gray: rgb(114, 111, 111);
+}
+body {
+    margin: 10px 20px;
+    padding: 0;
+    font-family: 'Questrial',Arial, Helvetica, sans-serif;
+
+}
+
+.header-title-container a {
+    text-decoration: none;
+    font-size: 35px;
+    color: black;
+    font-weight: bold;
+}
+header nav{
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+}
+.header-menu-container {
+    justify-content: space-evenly;
+    justify-self: end;
+}
+
+.header-menu-container a {
+    padding-left: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
+}
+.header-menu-container button {
+    max-height: 50px;
+    margin-left: 10px;
+    text-align: center;
+    background-color: rgb(241, 121, 41);
+    border-radius: 10px;
+    border: none;
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+}
+
+body {
+    padding: 32px 15px;
+    display: grid;
+    grid-template-columns: minmax(auto, 1264px);
+    justify-content: space-around;
+    margin: 0;
+}
+.main-container {
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:    "container1 container1"
+                            "container2 container2"
+                            "imagen2 container3"
+                            "container4 imagen3"
+                            "container5 container5"
+                            "container6 container6"
+                            "container7 container7";
+    
+                  
+    }
+
+
+ .main-container-main {
+    margin-top: 50px;
+    grid-area: container1;
+    display: grid;
+    justify-content: space-between;
+    background-color: var(--orange-color);
+    border-radius: 15px;
+    grid-template-columns: 25% 15% 150px 40%;
+    grid-template-areas: "main-title main-title . image1"
+                        "button1 button2 . image1"
+                        ". . button3 image1";
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 0 35px;
+} 
+.main-title {
+    grid-area: main-title;
+}
+
+.main-title h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 65px;
+    color: var(--wine-color);
+    height: 500;
+}
+.main-title p {
+    font-size: 17px;
+}
+.button1{
+    grid-area: button1;
+    justify-self: end;
+    align-self: center;
+    cursor: pointer;
+}
+.button2{
+    grid-area: button2;
+    justify-self: start;
+    align-self: center;
+    cursor: pointer;
+}
+.button3{
+    grid-area: button3;
+    cursor: pointer;
+    cursor: pointer;
+}
+.button1  img{
+    width: 150px;
+    justify-content: space-between;
+}
+.button2  img{
+    width: 120px;
+    justify-content: space-between;
+}
+.button3 img{
+    width: 80px;
+}
+
+.main-imagen1 {
+    grid-area: image1;
+    align-self: center;
+    justify-self: end;
+    
+}
+.main-imagen1 img {
+    width: 78%;
+       
+}
+
+.main-container-community {
+    grid-area: container2;
+    justify-content: center;
+    text-align: center;
+    margin-top: 30px;
+}
+.container-community, .container-connected, .container-popular, .pricing-title, h3 {
+    font-size: 15px;
+    color: var(--ligth-gray);
+    font-weight: bold;
+}
+.container-community, .container-connected, .container-popular, .pricing-title, h2 {
+    font-size: 40px;
+    color: var(--wine-color);
+    
+}
+.main-container-community img {
+    width: 98%;
+}
+
+.main-container-img2 {
+    grid-area: imagen2;
+}
+.main-container-img2 img {
+    width: 100%;
+}
+
+.main-container-connected {
+    grid-area: container3;
+    margin-left: 100px;
+}
+.container-connect-sign, .container-connect-event, .container-connect-memorie {
+    display: grid;
+    grid-template-columns: 20px 60%;
+    cursor: pointer;
+}
+.main-container-connected h4, .main-container-connected p {
+    padding-left: 60px;
+}
+.main-container-popular {
+    grid-area: container4;
+    justify-content: end;
+    padding-right: 200px;
+}
+
+.main-container-img3 {
+    grid-area: imagen3;
+    
+}
+.main-container-img3 img {
+    width: 100%;
+
+}
+
+.main-container-pricing{
+    grid-area: container5;
+}
+.pricing-title {
+    text-align: center;
+}
+.pricing-section {
+    display: grid;
+    grid-template-areas:    ". title ."
+                            "plan1 plan2 plan3";
+    background-color: var(--orange-color);
+    border-radius: 15px;
+    margin: 0 50px;
+}
+.pricing-section a{
+    text-decoration: none;
+}
+.button-get {
+    border: orangered solid 1px;
+    color: black;
+    padding: 15px;
+    border-radius: 10px;
+}
+.switch {
+   width: 40%;
+   align-self: center;
+   justify-self: center;
+  }
+.plans-title{
+    grid-area: title;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-self: center;
+    align-self: center;
+    margin-left: 65px;
+}
+.plans-plan1 {
+    grid-area: plan1;
+    margin: 25px 0 25px 100px;
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+}
+.plans-plan2 {
+    grid-area: plan2;
+    margin: 25px 0 25px 50px;
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+}
+.plans-plan3 {
+    grid-area: plan3;
+    margin: 25px 100px 25px 50px;
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgb(114, 111, 111);
+}
+.plan-type {
+    font-size: 20px;
+}
+.download-section {
+    grid-area: container6;
+    background-image: url('images/image18.png');
+    background-repeat: repeat;
+    background-color: rgb(241, 121, 41);
+    border-radius: 20px;
+    margin-top: 100px;
+    padding: 20px 0 30px 0;
+}
+.download-section h2 {
+    text-align: center;
+    font-size: 30px;
+    color: white;
+}
+.download-section p {
+    text-align: center;
+    font-size: 15px;
+    color: white;
+}
+.download-buttons{
+    display: grid;
+    justify-content: center;
+}
+.download-buttons .button1 {
+    width: 150px;
+    margin-right: 200px;
+}
+.download-buttons .button2 {
+    width: 120px;
+    margin-left: 200px;
+}
+.footer-map {
+    grid-area: container7;
+    display: grid;
+    grid-template-columns: repeat(5, 200px);
+    margin: 20px 100px 10px 100px;
+    justify-content: space-between;
+}
+
+.footer-map li{
+    list-style-type: none;
+}
+.footer-map h4{
+    padding-left: 40px;
+}
+.footer-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+    justify-content: space-evenly;
+    justify-self: end;
+    border-top: lightgray solid 1px;
+    padding-top: 15px;
+}
+.footer-title a {
+    text-decoration: none;
+    font-size: 35px;
+    color: black;
+    font-weight: bold;
+}
+.footer-menu {
+    align-self: center;
+    justify-self: end;
+}
+.footer-menu a {
+    padding-left: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+}
+.social-icons {
+    justify-self: end;
+}
+.social-icons a {
+    padding-left: 10px;
+    text-decoration: none;
+    font-size: 35px;
+    color: black;
+}
