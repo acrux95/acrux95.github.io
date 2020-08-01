@@ -8,6 +8,11 @@ body {
     margin: 10px 20px;
     padding: 0;
     font-family: 'Questrial',Arial, Helvetica, sans-serif;
+    padding: 32px 15px;
+    display: grid;
+    grid-template-columns: minmax(auto, 1264px);
+    justify-content: space-around;
+    margin: 0;
 
 }
 
@@ -44,14 +49,6 @@ header nav{
     font-size: 15px;
     color: white;
     cursor: pointer;
-}
-
-body {
-    padding: 32px 15px;
-    display: grid;
-    grid-template-columns: minmax(auto, 1264px);
-    justify-content: space-around;
-    margin: 0;
 }
 .main-container {
     
@@ -112,7 +109,6 @@ body {
 .button3{
     grid-area: button3;
     cursor: pointer;
-    cursor: pointer;
 }
 .button1  img{
     width: 150px;
@@ -136,7 +132,9 @@ body {
     width: 78%;
        
 }
-
+.main-container-community img {
+max-width: 1264px;
+}
 .main-container-community {
     grid-area: container2;
     justify-content: center;
@@ -153,9 +151,16 @@ body {
     color: var(--wine-color);
     
 }
-.main-container-community img {
-    width: 98%;
+.community-photos {
+    background-image: url('https://www.adippsa.com/Images/travellers/image2.png');
+    max-width: 1264px;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: repeat(12, 100px);
+    grid-template-rows: ;
+    grid-template-areas: ;
 }
+
 
 .main-container-img2 {
     grid-area: imagen2;
@@ -199,62 +204,121 @@ body {
 }
 .pricing-section {
     display: grid;
+    grid-template-columns: repeat(3, 300px);
     grid-template-areas:    ". title ."
                             "plan1 plan2 plan3";
     background-color: var(--orange-color);
     border-radius: 15px;
-    margin: 0 50px;
+    justify-content: space-evenly;
+    padding: 15px 50px;
 }
 .pricing-section a{
     text-decoration: none;
 }
-.button-get {
-    border: orangered solid 1px;
-    color: black;
-    padding: 15px;
-    border-radius: 10px;
+.plans-title {
+    display: grid;
+    grid-template-columns: 100px 1px repeat(2,100px);
+    
 }
-.switch {
-   width: 40%;
-   align-self: center;
-   justify-self: center;
-  }
+.toggle-button {
+    align-self: center;
+    justify-self: center;
+}
+
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+label {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 60px;
+	height: 30px;
+	background: grey;
+	display: block;
+	border-radius: 100px;
+    position: relative;
+    margin-bottom: 30px;
+    
+}
+
+label:after {
+	content: '';
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	border-radius: 90px;
+	transition: 0.3s;
+}
+
+input:checked + label {
+	background: rgb(241, 121, 41);
+}
+
+input:checked + label:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+
+label:active:after {
+	width: 65px;
+}
+
+
 .plans-title{
     grid-area: title;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-self: center;
     align-self: center;
-    margin-left: 65px;
 }
-.plans-plan1 {
+.plans-title p {
+    padding-top: 6px;
+}
+.plans-plan1  {
     grid-area: plan1;
-    margin: 25px 0 25px 100px;
-    padding: 40px;
+    padding: 10px 20px 20px 20px;
     background-color: white;
     border-radius: 10px;
+    display: grid;
+    grid-template-rows: 250px 200px 50px;
 }
 .plans-plan2 {
     grid-area: plan2;
-    margin: 25px 0 25px 50px;
-    padding: 40px;
+    padding: 10px 20px 20px 20px;
     background-color: white;
     border-radius: 10px;
+    display: grid;
+    grid-template-rows: 250px 200px 50px;
 }
 .plans-plan3 {
     grid-area: plan3;
-    margin: 25px 100px 25px 50px;
-    padding: 40px;
+    padding: 10px 20px 20px 20px;
     background-color: white;
     border-radius: 10px;
-    box-shadow: rgb(114, 111, 111);
+    display: grid;
+    grid-template-rows: 250px 200px 50px;
 }
 .plan-type {
     font-size: 20px;
 }
+.button-get {
+    border: orangered solid 1px;
+    color: black;
+    text-align: center;
+    border-radius: 10px;
+    align-self: center;
+    cursor: pointer;
+    
+}
 .download-section {
     grid-area: container6;
-    background-image: url('images/image18.png');
+    background-image: url("https://www.adippsa.com/Images/travellers/image18.png");
     background-repeat: repeat;
     background-color: rgb(241, 121, 41);
     border-radius: 20px;
